@@ -1,4 +1,4 @@
-console.log("HELLO")
+//console.log("HELLO")
 
 // fetch('http://localhost:3001/weather?address=' + location).then((response) => {
 
