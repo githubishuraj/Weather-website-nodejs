@@ -19,7 +19,8 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value
     fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
-            message.textContent = JSON.stringify(data)
+            temp = JSON.stringify(data)
+            message.textContent = `The tempreature of ${location} is ${temp}`
         })
     })
 })
