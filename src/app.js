@@ -42,6 +42,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const request = require('postman-request')
 
+const port = process.env.PORT || 3001
 
 const viewsPath = path.join(__dirname, '../templates/views')
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -103,8 +104,8 @@ app.get('/weather', (req, res) => {
 
 
 
-app.listen(3001, () => {
-    console.log("listening")
+app.listen(port, () => {
+    console.log("listening at " + port)
 })
 
 
@@ -139,9 +140,9 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("listening")
-})
+// app.listen(3000, () => {
+//     console.log("listening")
+// })
 
 
 
